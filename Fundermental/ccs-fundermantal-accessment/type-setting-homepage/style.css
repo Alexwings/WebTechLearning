@@ -1,0 +1,103 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 1.5em;
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  line-height: 1.5em;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+  
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+h1, h2 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 3rem;
+}
+header {
+  text-align: center;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+}
+
+nav li {
+  border: 1px solid lightgreen;
+  margin-bottom: 2em;
+  line-height: 3em;
+  list-style: none;
+  text-align: center;
+  color: gray
+}
+
+a:link {
+  color:blueviolet;
+}
+
+a:visited {
+  color:#a66;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav li:hover,
+nav li a:hover {
+  background-color: green;
+  color:white
+}
+
+nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section p a::after {
+  content:url(./external-link-52.svg);
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+

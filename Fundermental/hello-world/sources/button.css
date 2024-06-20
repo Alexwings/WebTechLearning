@@ -1,0 +1,55 @@
+
+button {
+    position: relative;
+    font-size: 25px;
+    --w: 200px;
+    width: var(--w);
+    height: 100px;
+    top: 20%;
+    left: calc(50% - var(--w) / 2);
+    display: block;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+    color: cyan;
+    overflow: hidden;
+    box-shadow: none;
+    outline: none;
+    border-color: transparent;
+    background-color: white;
+}
+
+button::before {
+    content: "";
+    display: block;
+    background-color: red;
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 200%;
+    height: 200%;
+    z-index: -2;
+    transform-origin: left top;
+    animation: rotation 2s linear infinite;
+}
+
+button::after {
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    --g: 5px;
+    width: calc(100% - var(--g) * 2);
+    height: calc(100% - var(--g) * 2);
+    left: var(--g);
+    top: var(--g);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
